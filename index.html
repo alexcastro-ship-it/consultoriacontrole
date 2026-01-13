@@ -2,32 +2,35 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
-<title>Controle de Pagamentos - Consultoria</title>
+<title>Controle de Consultoria Online</title>
 <link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 </head>
 <body>
 
 <h1>Controle de Pagamentos - Consultoria Online</h1>
 
-<nav>
-  <a href="cadastro.html">➕ Cadastrar Aluno</a>
-</nav>
+<h2>Cadastrar Aluno</h2>
 
+<input id="nome" placeholder="Nome do aluno">
+<input id="inicio" type="date">
+<input id="valor" placeholder="Valor mensal (R$)">
+<button onclick="cadastrarAluno()">Salvar</button>
+
+<h2>Alunos cadastrados</h2>
 <table id="tabela">
-  <thead>
-    <tr>
-      <th>Aluno</th>
-      <th>Início</th>
-      <th>Valor (R$)</th>
-      <th>Próximo Pagamento</th>
-      <th>Status</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
+<thead>
+<tr>
+<th>Aluno</th>
+<th>Início</th>
+<th>Valor</th>
+<th>Próximo vencimento</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody></tbody>
 </table>
 
 <script src="script.js"></script>
-<script>carregarAlunos();</script>
-
 </body>
 </html>
